@@ -1,0 +1,27 @@
+generator photon {
+  provider = "photonjs"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+model Post {
+  author    User?
+  content   String?
+  createdAt DateTime
+  id        String   @id
+  published Boolean  @default(true)
+  title     String   @default("")
+  updatedAt DateTime
+}
+
+model User {
+  age      Int?
+  email    String  @default("") @unique
+  id       String  @id
+  lastName String  @default("")
+  name     String?
+  posts    Post[]
+}

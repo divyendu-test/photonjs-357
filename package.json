@@ -1,0 +1,14 @@
+{
+  "name": "p2-e",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/photon": "2.0.0-preview018.2",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.20",
+    "prisma2": "^2.0.0-preview018.2"
+  }
+}
